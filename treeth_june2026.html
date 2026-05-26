@@ -514,28 +514,17 @@
   }
 
 /* === RWD 響應式縮放 === */
+html, body {
+  overflow-x: hidden;
+}
+
 @media screen and (max-width: 1360px) {
   body {
-    padding: 20px 0;
-  }
-  .slide {
-    transform: scale(calc(100vw / 1320));
-    transform-origin: top center;
-    margin-bottom: calc(40px - (1 - 100vw / 1320) * 720px);
+    zoom: calc(100vw / 1320);
+    padding: 0;
   }
 }
-
-@media screen and (max-width: 768px) {
-  body {
-    padding: 10px 0;
-  }
-  .slide {
-    transform: scale(calc(100vw / 1300));
-    transform-origin: top center;
-    margin-bottom: calc(20px - (1 - 100vw / 1300) * 720px);
-  }
-}
-
+  
 @media print {
     body { background: white; padding: 0; }
     .slide { box-shadow: none; margin: 0; }

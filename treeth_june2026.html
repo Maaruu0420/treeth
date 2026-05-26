@@ -516,12 +516,28 @@
 /* === RWD 響應式縮放 === */
 html, body {
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 @media screen and (max-width: 1360px) {
   body {
-    zoom: calc(100vw / 1320);
     padding: 0;
+    background: #2a2520;
+  }
+  .slide {
+    width: 100vw;
+    height: calc(100vw * 720 / 1280);
+    margin: 0 0 10px 0;
+    transform: none;
+  }
+  .slide > * {
+    transform: scale(calc(100vw / 1280));
+    transform-origin: top left;
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
   

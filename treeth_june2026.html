@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=1280, initial-scale=1.0">
 <title>淬齒淨白 - 六月社群規劃</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -513,7 +513,30 @@
     color: var(--brown-soft);
   }
 
-  @media print {
+/* === RWD 響應式縮放 === */
+@media screen and (max-width: 1360px) {
+  body {
+    padding: 20px 0;
+  }
+  .slide {
+    transform: scale(calc(100vw / 1320));
+    transform-origin: top center;
+    margin-bottom: calc(40px - (1 - 100vw / 1320) * 720px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px 0;
+  }
+  .slide {
+    transform: scale(calc(100vw / 1300));
+    transform-origin: top center;
+    margin-bottom: calc(20px - (1 - 100vw / 1300) * 720px);
+  }
+}
+
+@media print {
     body { background: white; padding: 0; }
     .slide { box-shadow: none; margin: 0; }
   }
